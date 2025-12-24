@@ -1,6 +1,9 @@
 Monthly Report Dashboard
 A high-fidelity, responsive medical report dashboard built with React, Vite, and SCSS. This project was developed as a technical assessment to demonstrate clean component architecture, advanced CSS layouts, and data visualization.
 
+🚀 Live Demo
+https://akhilrao-v.github.io/vajra/
+
 🛠️ Tech Stack
 Framework: React.js (Vite)
 Styling: SCSS (Sass) using BEM-like methodology and design tokens.
