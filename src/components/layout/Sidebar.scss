@@ -1,0 +1,97 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.sidebar {
+    width: $sidebar-width;
+    background-color: $color-bg-sidebar;
+    color: #8a8d9f;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+
+    @include mobile {
+        position: fixed;
+        transform: translateX(-100%);
+        &.open {
+            transform: translateX(0);
+        }
+    }
+
+    .brand {
+        padding: $spacing-unit * 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .vajra-logo {
+            max-width: 60px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .menu {
+        flex: 1;
+        padding: $spacing-unit * 2;
+
+        li {
+            margin-bottom: $spacing-unit;
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: $spacing-unit * 1.5;
+                border-radius: $card-border-radius;
+                transition: all 0.2s;
+                font-weight: 500;
+
+                svg {
+                    margin-right: $spacing-unit * 1.5;
+                    font-size: 20px;
+                }
+
+                &:hover, &.active {
+                    background-color: $color-bg-sidebar-active;
+                    color: $color-text-light;
+                }
+            }
+        }
+    }
+
+    .sidebar-footer {
+        padding: $spacing-unit * 3;
+        
+        button {
+            width: 100%;
+            padding: $spacing-unit * 1.5;
+            margin-bottom: $spacing-unit;
+            background: transparent;
+            border: 1px solid #8a8d9f;
+            color: #8a8d9f;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            &:hover {
+                border-color: $color-text-light;
+                color: $color-text-light;
+            }
+        }
+    }
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+    display: none;
+    @include mobile {
+        &.open { display: block; }
+    }
+}

@@ -1,0 +1,96 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+.asset-item-card {
+    @include card-style;
+    background: #fff;
+    padding: $spacing-unit * 2;
+    border-radius: 25px !important;
+    position: relative;
+    font-size: 13px;
+    
+    .info-row {
+        display: flex;
+        justify-content: space-between; // Default for mobile if needed
+        margin-bottom: 8px;
+        
+        strong {
+            font-weight: 600;
+            color: $color-text-primary;
+            min-width: 90px;
+            display: inline-block;
+        }
+        
+        span {
+            color: $color-text-secondary;
+            flex: 1;
+        }
+    }
+
+    .arrow-btn {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background: #e0e0e0;
+        border: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 0 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        
+        &:hover {
+            background: #d0d0d0;
+        }
+    }
+}
+
+.summary-card {
+    padding: 0;
+    overflow: hidden;
+    
+    .card-header-bg {
+        background-color: #D4EBFF; // Light blue background
+        padding: $spacing-unit * 2;
+        margin: -$spacing-unit * 2;
+        margin-bottom: $spacing-unit * 2;
+        border-radius: $card-border-radius $card-border-radius 0 0;
+        
+        h3 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: $color-text-primary;
+        }
+    }
+    
+    .card-content {
+        padding-top: 0;
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: $spacing-unit * 1.5 0;
+            // border-bottom: 1px solid #f0f0f0;
+            
+            // &:last-child {
+            //     border-bottom: none;
+            // }
+            
+            .label {
+                color: $color-text-primary;
+                font-weight: 600;
+                font-size: 14px;
+            }
+            
+            .value {
+                color: $color-text-primary;
+                font-size: 14px;
+            }
+        }
+    }
+}

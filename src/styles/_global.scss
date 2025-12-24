@@ -1,0 +1,44 @@
+@use './variables' as *;
+
+// General Card/Container Styles
+.card {
+  background: $color-card-bg;
+  border-radius: $card-border-radius;
+  padding: $spacing-unit * 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+// Typography Utilities
+h3.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: $spacing-unit * 2;
+  color: $color-text-primary;
+}
+
+// Flex Utilities
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Badge/Status dots
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+
+  &.blue { background-color: $color-blue; }
+  &.pink { background-color: $color-pink; }
+  &.orange { background-color: $color-orange; }
+  &.green { background-color: $color-green; }
+}
