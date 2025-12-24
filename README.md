@@ -1,16 +1,60 @@
-# React + Vite
+Monthly Report Dashboard
+A high-fidelity, responsive medical report dashboard built with React, Vite, and SCSS. This project was developed as a technical assessment to demonstrate clean component architecture, advanced CSS layouts, and data visualization.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🛠️ Tech Stack
+Framework: React.js (Vite)
+Styling: SCSS (Sass) using BEM-like methodology and design tokens.
+Icons: react-icons (Feather Icons set).
+Charts: chart.js & react-chartjs-2.
+Routing: react-router-dom (HashRouter for GitHub Pages compatibility).
 
-Currently, two official plugins are available:
+✨ Features
+Pixel Perfect Implementation: Closely follows the provided Figma design for both Desktop and Mobile.
+Responsive Design: * Adaptive grid system for dashboard widgets.
+Collapsible sidebar that transforms into a mobile drawer menu.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mobile-optimized tables and asset cards.
+Interactive Charts: Dynamic donut charts for asset status and stacked bar charts for departmental reporting.
+Component-Based Architecture: Highly reusable UI components including StatCard, DepartmentSection, and SummarySection.
 
-## React Compiler
+⚙️ Getting Started
+Prerequisites
+Node.js (v16 or higher)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+npm or yarn
 
-## Expanding the ESLint configuration
+Installation
+Clone the repository:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Bash
+
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+Install dependencies:
+
+Bash
+
+npm install
+Run the development server:
+
+Bash
+
+npm run dev
+Build for production:
+
+Bash
+
+npm run build
+📝 Decisions & Assumptions
+Font: Used 'Poppins' via Google Fonts as a professional alternative to match the design's clean aesthetic.
+
+State Management: Used React Hooks (useState) for UI state (sidebar toggles) as complex global state management wasn't required for this static dashboard.
+
+Styling: Chose SCSS over Tailwind to demonstrate strong proficiency in CSS fundamentals, Flexbox, and Grid systems.
+
+👤 Author
+Akhil rao velpula
+
+LinkedIn: https://www.linkedin.com/in/akhil-rao-28071999v/
+
+Portfolio: https://akhil-rao-portfolio.vercel.app/
